@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Next Top Professor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="aurora aurora-1"></div>
+    <div class="aurora aurora-2"></div>
+    <main class="app">
+      <header class="hero glass">
+        <h1>The Next Top Professor</h1>
+        <p>6 人線上桌遊：在學術現實中，排序你的價值，辯出你的立場。</p>
+        <div class="hero-actions">
+          <label>
+            玩家人數
+            <select id="playerCount">
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6" selected>6</option>
+            </select>
+          </label>
+          <label>
+            回合數
+            <select id="roundCount">
+              <option value="4">4</option>
+              <option value="5" selected>5</option>
+              <option value="6">6</option>
+            </select>
+          </label>
+          <button id="startBtn" class="btn primary">開始新遊戲</button>
+        </div>
+      </header>
+
+      <section class="board">
+        <aside class="panel glass">
+          <h2>本回合資訊</h2>
+          <div class="chip-row">
+            <span class="chip" id="roundLabel">回合 -</span>
+            <span class="chip" id="phaseLabel">階段：準備中</span>
+          </div>
+          <article class="card task" id="taskCard"></article>
+          <article class="card event" id="eventCard"></article>
+          <article class="card role" id="activePlayerCard"></article>
+        </aside>
+
+        <section class="panel glass play-area">
+          <h2>玩家操作區</h2>
+          <div id="roleActionArea" class="role-action"></div>
+          <div id="valueSelectors" class="selectors"></div>
+          <div class="actions">
+            <button id="submitChoiceBtn" class="btn">提交本玩家排序</button>
+            <button id="resolveRoundBtn" class="btn secondary" disabled>結算本回合</button>
+          </div>
+          <p id="statusText" class="status"></p>
+        </section>
+
+        <aside class="panel glass">
+          <h2>排行榜</h2>
+          <ol id="scoreboard" class="scoreboard"></ol>
+          <h3>公開紀錄</h3>
+          <div id="history" class="history"></div>
+        </aside>
+      </section>
+
+      <section class="panel glass asset-panel">
+        <h2>素材資產（可拿去簡報/規則書）</h2>
+        <p>下方是已生成的 9 個價值圖示、卡背與 UI 模擬截圖，皆為 SVG 可無損放大。</p>
+        <div class="asset-grid">
+          <img src="assets/icons/salary.svg" alt="Salary icon" />
+          <img src="assets/icons/reputation.svg" alt="Reputation icon" />
+          <img src="assets/icons/research-freedom.svg" alt="Research freedom icon" />
+          <img src="assets/icons/teaching-impact.svg" alt="Teaching impact icon" />
+          <img src="assets/icons/work-life-balance.svg" alt="Work life icon" />
+          <img src="assets/icons/health.svg" alt="Health icon" />
+          <img src="assets/icons/family-care.svg" alt="Family icon" />
+          <img src="assets/icons/job-security.svg" alt="Job security icon" />
+          <img src="assets/icons/social-contribution.svg" alt="Social icon" />
+          <img src="assets/icons/card-back.svg" alt="Card back" class="wide" />
+          <img src="assets/screenshots/gameplay-mockup.svg" alt="Gameplay mockup" class="wide" />
+        </div>
+      </section>
+    </main>
+
+    <template id="scoreItemTemplate">
+      <li>
+        <div>
+          <strong class="name"></strong>
+          <small class="role"></small>
+        </div>
+        <span class="score"></span>
+      </li>
+    </template>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>

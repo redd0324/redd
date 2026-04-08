@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Family/Care 家庭照顧">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0b1020"/>
+      <stop offset="100%" stop-color="#111936"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="52" fill="url(#g)"/>
+  <circle cx="256" cy="190" r="110" fill="#ec4899" opacity="0.2"/>
+  <circle cx="256" cy="190" r="86" fill="#ec4899" opacity="0.32"/>
+  <text x="256" y="210" text-anchor="middle" font-size="88">🏠</text>
+  <rect x="52" y="322" width="408" height="124" rx="24" fill="#101a35" stroke="#ec4899" stroke-width="3"/>
+  <text x="256" y="380" text-anchor="middle" fill="#eef4ff" font-family="'Noto Sans TC', Arial, sans-serif" font-size="30" font-weight="700">Family/Care 家庭照顧</text>
+</svg>
